@@ -1,11 +1,11 @@
 # Pipeline components
 
-To build a professional and efficient pipeline we need several components. We need an execution environment such as `virtualenv` or `conda`, we need data, tools to process and analyse the data (self build python or R scripts or tools like bowtie), a version control system like `git` or and a workflow / pipeline script that calls all the other scripts and tools. In the bioinformatics dataprocessing course we will use the following components as a base:
+To build a professional and efficient pipeline we need several components. We need an execution environment such as`conda`, we need data, tools to process and analyse the data (self build python or R scripts or tools like bowtie), a version control system like `git` or and a workflow / pipeline script that calls all the other scripts and tools. In the bioinformatics dataprocessing course we will use the following components as a base:
 
 <figure><img src="../.gitbook/assets/elements_of_data_analysis.png" alt=""><figcaption><p>Elements of a data analysis workflow</p></figcaption></figure>
 
 * workflow engine: `snakemake`
-* execution environment: `virtualenv`
+* execution environment: `conda`
 * version control: git / bitbucket (whatever you prefer)
 * data processing and analysis scripts: python / R
 
