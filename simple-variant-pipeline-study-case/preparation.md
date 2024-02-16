@@ -4,17 +4,17 @@
 
 First, you need to activate your work environment again.
 
-```python
-source {name}/bin/activate
+```bash
+conda activate <name_of_created_conda_env>
 ```
 
 ### Data Preparation
 
-Next, we need the data. It is important to organize our data in subdirectories so that we do not override original data with processed data. Fetch the data from
+Next, we need the data. It is important to organize our data in subdirectories to avoid overriding original data with processed data. Fetch the data from
 
 ```bash
-/commons/Themas/Thema11/Dataprocessing/data
-/commons/Themas/Thema11/Dataprocessing/data/samples
+/commons/Themas/Thema11/Dataprocessing/WC02/data
+/commons/Themas/Thema11/Dataprocessing/WC02/data/samples
 ```
 
 and organise as follows in your work directory
