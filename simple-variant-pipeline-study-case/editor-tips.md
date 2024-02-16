@@ -2,13 +2,7 @@
 
 ### Editor tips
 
-The Emacs editor can be used for convenient syntax highlighting. Start the editor, and enter on top of the Snakefile:
-
-```python
-# -*- python -*-
-```
-
-Now save the file, and restart the editor. You will see how the syntax highlights. If you do not work remote you can install editors like atom, visual studio code or pycharm on your system to edit the scripts.&#x20;
+Both Pycharm and Visual Code can be used for convenient syntax highlighting.  Search for `snakemake` in the plugin section of the IDE.
 
 In snakemake you can simply use the
 
