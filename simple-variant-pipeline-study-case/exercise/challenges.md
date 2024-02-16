@@ -5,12 +5,12 @@ Once you finished these parts you can continue with two additional challenges. T
 **Challenge 1**: Change your script to use the data directly from
 
 ```bash
-/commons/Themas/Thema11/Dataprocessing/data 
+/commons/Themas/Thema11/Dataprocessing/WC02/data 
 ```
 
 without typing the full path every time you need the path it in the script. Upload the script to the repository
 
-**Challenge 2**: Change `bwa mem` to `bowtie2`. Search on the internet for bowtie manuals how to do this. Compare the outcomes. What is there a difference? How about the performance? Measure this by adding a benchmark. With the benchmark directive, Snakemake can be instructed to measure the wall clock time of a job. Activate benchmarking for the rule like below:
+**Challenge 2**: Change `bwa mem` to `bowtie2`. Search on the internet for bowtie manuals how to do this. Compare the outcomes. Was there a difference? How about the performance? Measure this by adding a benchmark. With the benchmark directive, Snakemake can be instructed to measure the wall clock time of a job. Activate benchmarking for the rule like below:
 
 ```python
 rule bwa_map:

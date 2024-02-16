@@ -3,7 +3,7 @@
 The next step in our workflow will aggregate the mapped reads from all samples and jointly call genomic variants on them (see Background). For the variant calling, we will combine the two utilities `samtools` and `bcftools`.
 
 ```bash
-samtools mpileup -g -f data/genome.fa sorted_reads/A.bam | \
+bcftools mpileup -f data/genome.fa sorted_reads/A.bam | \
 bcftools call -mv - > calls/all.vcf
 ```
 
@@ -18,7 +18,7 @@ rule bcftools_call:
     output:
         "calls/all.vcf"
     shell:
-        "samtools mpileup -g -f {input.fa} {input.bam} | "
+        "bcftools mpileup -f {input.fa} {input.bam} | "
         "bcftools call -mv - > {output}"
 ```
 
