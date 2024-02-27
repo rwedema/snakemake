@@ -4,7 +4,7 @@ Before you start: Make sure that you activate your virtual environment.&#x20;
 
 ### HTTP
 
-Download the https://bioinf.nl/\~fennaf/snakemake/test.txt file via a Snakefile.&#x20;
+Download the https://bioinf.nl/\~ronald/snakemake/test.txt file via a Snakefile.&#x20;
 
 ### NCBI
 
