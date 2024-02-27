@@ -16,7 +16,7 @@ Move your data from studycase 02 to a data directory on your commons directory. 
 
 ### Configuration file
 
-Write a snakemake script that runs a merge variants workflow merging the data from bioinf.nl/\~fennaf/snakemake/WC03/data. Use a configuration file.&#x20;
+Write a snakemake script that runs a merge variants workflow merging the data from bioinf.nl/\~ronald/snakemake/WC03/data. Use a configuration file.&#x20;
 
 ### Include modules
 
