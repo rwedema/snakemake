@@ -28,7 +28,7 @@ The `NCBI.remote("file.fasta", db="source database")` will retrieve the fasta fi
 ```python
 import os
 from snakemake.remote.NCBI import RemoteProvider as NCBIRemoteProvider
-NCBI = NCBIRemoteProvider(email="f.feenstra@pl.hanze.nl") # email required by NCBI
+NCBI = NCBIRemoteProvider(email="r.wedema@pl.hanze.nl") # email required by NCBI
 
 rule all:
     input:
@@ -44,7 +44,7 @@ Downloading files is not always needed for the pipeline processing. One might be
 
 ```python
 from snakemake.remote.NCBI import RemoteProvider as NCBIRemoteProvider
-NCBI = NCBIRemoteProvider(email="f.feenstra@pl.hanze.nl") # email required by NCBI to prevent abuse
+NCBI = NCBIRemoteProvider(email="r.wedema@pl.hanze.nl") # email required by NCBI to prevent abuse
 
 rule all:
     input:
@@ -69,7 +69,7 @@ Below you find an example of a query searching for Zika virus genomes. Searched 
 
 ```python
 from snakemake.remote.NCBI import RemoteProvider as NCBIRemoteProvider
-NCBI = NCBIRemoteProvider(email="f.feenstra@pl.hanze.nl") # email required by NCBI to prevent abuse
+NCBI = NCBIRemoteProvider(email="r.wedema@pl.hanze.nl") # email required by NCBI to prevent abuse
 
 # get accessions for the first 3 results in a search for full-length Zika virus genomes
 # the query parameter accepts standard GenBank search syntax
