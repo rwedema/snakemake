@@ -78,4 +78,31 @@ config["ext"]
 
 Using the config file allows you to develop a pipeline without hardcoded data paths.&#x20;
 
-Instead of using the system avail
+Instead of using the system's available tools, we can also download the tools into a conda environment. This allows us to define a per-rule environment. The specifications for the environment are stored in yaml configuration files, as shown below:
+
+```psl
+#configfile calling.yaml
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - samtools=1.9
+  - bcftools=1.9
+
+```
+
+Configuration files for environments are typically stored inside an `envs` folder. To use this configuration in a rule use the following syntax:
+
+```
+rule call:
+    input:
+        genome="data/genome.fa",
+        bam=expand("mapped_reads/{sample}.sorted.bam", sample=config['samples'])
+    output:
+        "calls/all.vcf"
+    conda:
+        "envs/calling.yaml"
+    shell:
+        "samtools mpileup -g -f {input.genome} {input.bam} | "
+        "bcftools call -mv - > {output}"
+```
