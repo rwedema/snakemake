@@ -4,10 +4,10 @@ Snakemake can access web resources via a several remote services. The Snakefile 
 
 ### HTTP
 
-Below you find an example in which the WGET is used to download files from to the site https://bioinf.nl/\~fennaf/snakemake/WC03/data into a current work directory.
+Below you find an example in which the WGET is used to download files from to the site https://bioinf.nl/\~ronald/snakemake/WC03/data into a current work directory.
 
 ```python
-url = "bioinf.nl/~fennaf/snakemake/WC03/data/"
+url = "bioinf.nl/~ronald/snakemake/WC03/data/"
 SAMPLES = [x for x in 'ABDEFGHIJ']
 
 rule all:
