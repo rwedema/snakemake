@@ -1,10 +1,9 @@
 # Data paths
 
-So far we used our working directory with the Snakefile for input and output files. We defined input files along with their subdirectory
+So far we used our working directory with the Snakefile for input and output files. We defined input files along with their subdirectory.
 
-```python
-rule bwa_map:
-    input:
+<pre class="language-python"><code class="lang-python"><strong>rule bwa_map:
+</strong>    input:
         "data/genome.fa",
         "data/samples/A.fastq"
     output:
@@ -12,15 +11,15 @@ rule bwa_map:
     shell:
         "bwa mem {input} | samtools view -Sb - > {output}"
         
-```
+</code></pre>
 
-All paths in the snakefile are interpreted relative to the directory snakemake is executed in. This behaviour can be overridden by specifying a workdir in the snakefile:
+All paths in the snakefile are interpreted relative to the directory snakemake is executed in. This behavior can be overridden by specifying a `workdir` in the snakefile:
 
 ```python
 workdir: "path/to/workdir"
 ```
 
-So far we only used the path of our working directory. But if we decide to move our data we can change the data paths in the script anywhere. Better practise is to use variables declared in the first lines of the script for the data paths. Since snakemake is python based we can work with string concatenations or joins.
+So far we only used the path of our working directory. But if we decide to move our data we can change the data paths in the script anywhere. A better practice is to use variables declared in the first lines of the script for the data paths. Since snakemake is Python-based we can work with string concatenations or joins.
 
 ```python
 #concatenation example
@@ -56,7 +55,7 @@ rule quantify_genes:
         'echo {input.genome} {input.r1} {input.r2} > {output}'
 ```
 
-Best practise of course is not to use a variable wdir for our working directory but the `workdir:` feature
+The best practise of course is not to use a variable `wdir` for our working directory but the `workdir:` feature
 
 ```python
 #concatenation example with workdir
