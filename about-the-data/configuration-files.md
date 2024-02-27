@@ -1,6 +1,6 @@
 # Configuration files
 
-Configuration files specify the parameters of an application, such as data paths, thresholds, or filter values. These parameters typically are written in a key-value pair format. Placing the parameter values in a configuration file gives a central and well-organised location to specify what arguments ought to be parsed to a program without hard-coding such in a script. This makes code more user-friendly and flexible.&#x20;
+Configuration files specify the parameters of an application, such as data paths, thresholds, or filter values. These parameters typically are written in a key-value pair format. Placing the parameter values in a configuration file gives a central and well-organized location to specify what arguments ought to be parsed to a program without hard coding such as in a script. This makes code more user-friendly and flexible.&#x20;
 
 Snakemake provides a configuration file mechanism. Configuration files can be written in JSON or YAML, and loaded with the configuration file directive.&#x20;
 
@@ -26,15 +26,15 @@ pip install pyyaml
 
 A YAML file is just a flat file value with key : value pairs. YAML supports strings, integers, floats, lists, and associative&#x20;
 
-For our Snakefile we need a separate configuration file with the some genome and sample data.
+For our Snakefile we need a separate configuration file with some genome and sample data.
 
-First we need to create a `config.yaml` file in the working directory listing the files. Instead of expanding a list with the sample names we now expand the samples from the configuration file
+First, we need to create a `config.yaml` file in the working directory listing the files. Instead of expanding a list with the sample names we now expand the samples from the configuration file
 
 ```python
-vcf=expand("calls/{sample}.g.vcf", sample=config["samples"]),py
+vcf=expand("calls/{sample}.g.vcf", sample=config["samples"])
 ```
 
-Data (A.bam .. J.bam) for this example below is to be found at bioinf.nl/\~fennaf/snakemake/WC03/data
+Data (A.bam .. J.bam) for this example below is to be found at bioinf.nl/\~ronald/snakemake/WC03/data
 
 ```yaml
 #configfile config.yaml
@@ -69,11 +69,13 @@ rule merge_variants:
     
 ```
 
-The config principle can be used for other wildcards variables as well.
+The config principle can be used for other wildcard variables as well.
 
 ```python
 config["genome"]
 config["ext"]
 ```
 
-Using the config file allows you develop a pipeline without hardcoded data paths.&#x20;
+Using the config file allows you to develop a pipeline without hardcoded data paths.&#x20;
+
+Instead of using the system avail
