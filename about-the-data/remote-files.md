@@ -36,7 +36,7 @@ The efetch wrapper will retrieve files from the NCBI source database. For exampl
 To start the workflow we have to specify to use Conda using the `--use-conda` argument. In doing so, snakemake will create a conda environment downloading the efetch tool.&#x20;
 
 ```bash
-// snakemake -c 1 --use-conda --conda-frontend conda
+snakemake -c 1 --use-conda --conda-frontend conda
 ```
 
 The `--conda-frontend conda` in the previous command specifies to use conda instead of mamba.
